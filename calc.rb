@@ -14,14 +14,32 @@ puts 365 * 24
 # mintutes in one year including leap year
 year_minutes = (365.25 * 24) * 60
 
-puts "Hours in a year are: #{year_minutes}"
+puts "Hours in a year = #{year_minutes}"
 
 #decade is 10 years, year_minutes multiplied by 10 is minutes in a decade
  decade_minutes = year_minutes * 10
 
- puts "Minutes in a decade are: #{decade_minutes}"
+ puts "Minutes in a decade = #{decade_minutes}"
 
  #how many seconds old am I? 
- #
+ #1 minute = 60 seconds
+ #I am 25 years old therefore using year_minutes, multiply by 25 for minutes total for 25 years and then multiply by 60 seconds
+ my_age_in_minutes = year_minutes * 25
+ my_age_in_seconds = my_age_in_minutes * 60
 
+ puts "My age in seconds = #{my_age_in_seconds}"
+
+ #how many chocolates do you hope to eat in your life?
+ #I think I eat 5 chocolates a month, thats 5 * 12 for total chocolates consumed in a year
+ #Life expectancy in the UK is 81.5 years
+ life_expectancy = 81.5
+ chocolates_in_a_year = 5 * 12
+ chocolates_in_a_lifetime = chocolates_in_a_year * life_expectancy
+
+ puts "Amount of chocolate I may consume in my life is: #{chocolates_in_a_lifetime}"
+
+ #If I am 1230 million seconds old, how old am I?
+ #1 second = 0.000277778 hours
+your_age = (1230000000 * 0.000277778) 
+puts your_age
 
