@@ -40,6 +40,6 @@ puts "Hours in a year = #{year_minutes}"
 
  #If I am 1230 million seconds old, how old am I?
  #1 second = 0.000277778 hours
-your_age = (1230000000 * 0.000277778) 
+your_age = 1025000000/(60*60*24*365)
 puts your_age
 
