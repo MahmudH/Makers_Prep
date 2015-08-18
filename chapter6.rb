@@ -1,8 +1,20 @@
 speak = ""
+bye = 0
 
 while speak != "BYE"
 	puts "What would you like to say?"
 	speak = gets.chomp
+
+	if speak == "BYE"
+		bye += 1
+	else
+		bye = 0
+	end
+
+	if bye >= 3
+		break
+	end
+
 	if speak != speak.upcase
 		puts "NO, NOT SINCE #{rand(1930..1950)}!" unless speak.upcase == "BYE"
 	else

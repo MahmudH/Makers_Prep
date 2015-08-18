@@ -19,6 +19,12 @@ while true
 	words.push word
 end
  # i=0
+
+# words.each do |x, y|
+# 	x <=> y
+# end
+
+# puts words
 puts words.sort
 
 # words.each do |words|
@@ -51,13 +57,11 @@ puts words
 # Table of contents using arrays
 
 table = "Table of contents"
-chapters = [['Numbers', 1], ['Letters', 72], ['Variables', 118]]
+chapters = [['Numbers', "1"], ['Letters', "72"], ['Variables', "118"]]
 
-linewidth = 40
-
-puts table.center(linewidth)
-chapters.each do |name|
-	puts name.ljust(30)
+puts table.center(40)
+chapters.each do |name, page|
+	puts name.ljust(30) + page.rjust(30)
 end
 
 
