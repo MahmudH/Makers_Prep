@@ -31,104 +31,63 @@ def englishNumber number
   
   left  = number
 
-  write = left/1000000000000          # How many hundreds left to write out?
+  write = left/1000000000000          # How many trillions left to write out?
   left  = left - write*1000000000000  # Subtract off those hundreds.
 
   if write > 0
     # Now here's a really sly trick:
     trillions  = englishNumber write
     numString = numString + trillions + ' trillion'
-    # That's called "recursion". So what did I just do?
-    # I told this method to call itself, but with "write" instead of
-    # "number". Remember that "write" is (at the moment) the number of
-    # hundreds we have to write out. After we add "hundreds" to
-    # "numString", we add the string ' hundred' after it.
-    # So, for example, if we originally called englishNumber with
-    # 1999 (so "number" = 1999), then at this point "write" would
-    # be 19, and "left" would be 99. The laziest thing to do at this
-    # point is to have englishNumber write out the 'nineteen' for us,
-    # then we write out ' hundred', and then the rest of
-    # englishNumber writes out 'ninety-nine'.
+    #recursion
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' and '
+      numString = numString + ' '
     end
   end
 
 
-  write = left/1000000000          # How many hundreds left to write out?
+  write = left/1000000000          # How many billions left to write out?
   left  = left - write*1000000000  # Subtract off those hundreds.
 
   if write > 0
     # Now here's a really sly trick:
     billians  = englishNumber write
     numString = numString + billians + ' billion'
-    # That's called "recursion". So what did I just do?
-    # I told this method to call itself, but with "write" instead of
-    # "number". Remember that "write" is (at the moment) the number of
-    # hundreds we have to write out. After we add "hundreds" to
-    # "numString", we add the string ' hundred' after it.
-    # So, for example, if we originally called englishNumber with
-    # 1999 (so "number" = 1999), then at this point "write" would
-    # be 19, and "left" would be 99. The laziest thing to do at this
-    # point is to have englishNumber write out the 'nineteen' for us,
-    # then we write out ' hundred', and then the rest of
-    # englishNumber writes out 'ninety-nine'.
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' and '
+      numString = numString + ' '
     end
   end
 
-  write = left/1000000          # How many hundreds left to write out?
+  write = left/1000000          # How many millions left to write out?
   left  = left - write*1000000  # Subtract off those hundreds.
 
   if write > 0
     # Now here's a really sly trick:
     millions  = englishNumber write
     numString = numString + millions + ' million'
-    # That's called "recursion". So what did I just do?
-    # I told this method to call itself, but with "write" instead of
-    # "number". Remember that "write" is (at the moment) the number of
-    # hundreds we have to write out. After we add "hundreds" to
-    # "numString", we add the string ' hundred' after it.
-    # So, for example, if we originally called englishNumber with
-    # 1999 (so "number" = 1999), then at this point "write" would
-    # be 19, and "left" would be 99. The laziest thing to do at this
-    # point is to have englishNumber write out the 'nineteen' for us,
-    # then we write out ' hundred', and then the rest of
-    # englishNumber writes out 'ninety-nine'.
-
+    
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' and '
+      numString = numString + ' '
     end
   end
 
-  write = left/1000          # How many hundreds left to write out?
+  write = left/1000          # How many thousands left to write out?
   left  = left - write*1000  # Subtract off those hundreds.
 
   if write > 0
     # Now here's a really sly trick:
     thousands  = englishNumber write
     numString = numString + thousands + ' thousand'
-    # That's called "recursion". So what did I just do?
-    # I told this method to call itself, but with "write" instead of
-    # "number". Remember that "write" is (at the moment) the number of
-    # hundreds we have to write out. After we add "hundreds" to
-    # "numString", we add the string ' hundred' after it.
-    # So, for example, if we originally called englishNumber with
-    # 1999 (so "number" = 1999), then at this point "write" would
-    # be 19, and "left" would be 99. The laziest thing to do at this
-    # point is to have englishNumber write out the 'nineteen' for us,
-    # then we write out ' hundred', and then the rest of
+    # then we write out ' thousand', and then the rest of
     # englishNumber writes out 'ninety-nine'.
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' and '
+      numString = numString + ' '
     end
   end
 
@@ -153,7 +112,7 @@ def englishNumber number
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' and '
+      numString = numString + ' '
     end
   end
 
@@ -193,6 +152,15 @@ def englishNumber number
   numString
 end
 
+  num = 5
+  while num > 0
+    puts englishNumber(num) + " bottles of beer on the wall, " +
+    englishNumber(num) + " bottles of beer!"
+    num = num - 1
+    puts "Take one down, pass it around, " +
+    englishNumber(num) + " bottles of beer on the wall!"
+  end
+
 # puts englishNumber(  0)
 # puts englishNumber(  9)
 # puts englishNumber( 10)
@@ -204,7 +172,7 @@ end
 # puts englishNumber(100)
 # puts englishNumber(101)
 # puts englishNumber(234)
-puts englishNumber(3211)
-puts englishNumber(10250)
+#puts englishNumber(3211)
+#puts englishNumber(10250)
 #puts englishNumber(2999999)
 #puts englishNumber(1300000000000)
