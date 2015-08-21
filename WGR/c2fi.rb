@@ -1,3 +1,4 @@
+
 puts "Hello, please enter the celsius value"
 celsius = gets
 fahrenheit = (celsius.to_i * 9 / 5) + 32
