@@ -42,7 +42,7 @@ def englishNumber number
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' '
+      numString = numString + ' and '
     end
   end
 
@@ -57,7 +57,7 @@ def englishNumber number
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' '
+      numString = numString + ' and '
     end
   end
 
@@ -71,7 +71,7 @@ def englishNumber number
     
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' '
+      numString = numString + ' and '
     end
   end
 
@@ -87,7 +87,7 @@ def englishNumber number
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' '
+      numString = numString + ' and '
     end
   end
 
@@ -112,7 +112,7 @@ def englishNumber number
 
     if left > 0
       # So we don't write 'two hundredfifty-one'...
-      numString = numString + ' '
+      numString = numString + ' and '
     end
   end
 
@@ -152,27 +152,18 @@ def englishNumber number
   numString
 end
 
-  num = 5
-  while num > 0
-    puts englishNumber(num) + " bottles of beer on the wall, " +
-    englishNumber(num) + " bottles of beer!"
-    num = num - 1
-    puts "Take one down, pass it around, " +
-    englishNumber(num) + " bottles of beer on the wall!"
-  end
-
 # puts englishNumber(  0)
-# puts englishNumber(  9)
-# puts englishNumber( 10)
+#puts englishNumber(  9)
+#puts englishNumber( 10)
 # puts englishNumber( 11)
 # puts englishNumber( 17)
 # puts englishNumber( 32)
 # puts englishNumber( 88)
 # puts englishNumber( 99)
 # puts englishNumber(100)
-# puts englishNumber(101)
+ #puts englishNumber(101)
 # puts englishNumber(234)
 #puts englishNumber(3211)
-#puts englishNumber(10250)
+puts englishNumber(10250)
 #puts englishNumber(2999999)
 #puts englishNumber(1300000000000)
