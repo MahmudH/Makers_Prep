@@ -1,0 +1,90 @@
+<body>
+	<header>
+		<div id="logo">
+			
+		</div>
+		<div class="apply">
+			<h1>
+				APPLY TO MAKERS ACADEMY
+			</h1>
+			<!-- <h4>
+				Apply now and take your first step to kickstarting your career as a Junior Developer.
+			</h4> -->
+		</div>
+		<div class="apply">
+			Apply now and take your first step to kickstarting your career as a Junior Developer.
+		</div>
+	</header>
+
+	<!-- <h1 class="container">Application form</h1>-->
+	<div class="container">
+		<%= form_for :form, url: forms_path do |f| %>
+
+	  <p class="form-group">
+	    <%= f.label :firstname %><br>
+	    <%= f.text_field :firstname, class: 'form-control' %>
+	  </p>
+
+	  <p class="form-group">
+	    <%= f.label :lastname %><br>
+	    <%= f.text_field :lastname, class: 'form-control' %>
+	  </p>
+
+	  <p class="form-group">
+	    <%= f.label :email %><br>
+	    <%= f.email_field :email, class: 'form-control' %>
+	  </p>
+
+	  <p class="form-group">
+	    <%= f.label :phone %><br>
+	    <%= f.text_field :phone, class: 'form-control' %>
+	  </p>
+
+	  <h2 class="header1">LET'S TALK A LITTLE BIT MORE ABOUT YOU</h2>
+	 
+	 <h3>Why do you want to attend Makers Academy?</h3>
+	 <h4>Build the next Facebook? Change the world? Quit a boring job and start an exciting career? Make lots of money as a software developer? Just because you like coding?</h4>
+	 <h5>(Please keep your response between 80 - 250 words!)</h5>
+	  <p class="form-group">
+	    <%= f.text_area :reason, class: 'form-control', rows: '12' %>
+	  </p>
+
+	   <h3>How have you learnt to code so far?</h3>
+	 <h4>If you can't code, it won't count against you: all you need is passion and the ability to unlearn the word "quit."</h4>
+	 <h5>(Please keep your response between 80 - 250 words!)</h5>
+	  <p class="form-group">
+	  	<%= f.text_area :experience, class: 'form-control', rows: '12' %>
+	  </p>
+
+	  <h3>How did you hear about us?</h4>
+	  <h4>Purely for marketing reasons. If you heard about us through multiple channels, choose the one that influenced your decision the most.</h5>
+	  <p class="form-group">
+	  	<%= f.label "Select an option..." %>
+	  	<%= f.select(:option_type, options_for_select(['Google', 'Twiiter', 'Quora'])) %>
+	  </p>
+	 
+	  <p class="text-center">
+	    <%= f.submit "Apply", class: 'btn btn-default'%>
+	  </p>
+	<% end %>
+	</div>
+	
+
+</body>
+
+
+<%= form_for :form, url: forms_path do |f| %>
+  <p>
+    <%= f.label :firstname %><br>
+    <%= f.text_field :firstname %>
+  </p>
+ 
+  <p>
+    <%= f.label :lastname %><br>
+    <%= f.text_field :lastname %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

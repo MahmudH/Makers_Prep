@@ -1,0 +1,23 @@
+<h1>Listing forms</h1>
+ 
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Phone number</th>
+    <th>Reason</th>
+    <th>Experience</th>
+  </tr>
+ 
+  <% @forms.each do |form| %>
+    <tr>
+      <td><%= form.firstname %></td>
+      <td><%= form.lastname %></td>
+      <td><%= form.email %></td>
+      <td><%= form.phone %></td>
+      <td><%= form.reason %></td>
+      <td><%= form.experience %></td>
+    </tr>
+  <% end %>
+</table>

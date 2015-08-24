@@ -25,8 +25,8 @@ def ticket.price
 end
 
 # Using string interpolation
-puts "This ticket is for: #{ticket.event}, at #{ticket.venue}." + "The performer is #{ticket.performer}." 
-+ 
+puts "This ticket is for: #{ticket.event}, at #{ticket.venue} on #{ticket.date}." + "The performer is #{ticket.performer}." 
++ "The seat is #{ticket.seat} and it costs #{ticket.price}"
 
 # Without string interpolation
 # print "This ticket is for: "

@@ -1,0 +1,41 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body{
+	box-sizing: border-box;
+	margin: 0;
+}
+
+header{
+	background-image: url('student-concentrating.jpg');
+	height: 100vh;
+	background-size: cover;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+}
+
+#logo{
+	background-image: url('ma-white.png');
+	height: 84px;
+	width: 200px;
+}
+
+.apply{
+	font-family: "futura-pt", Futura, "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+	color: #ffffff;
+	font-size: 1.9rem;
+}
+
+.form-control{
+	height: 50px;
+}
+
+.header1{
+	color: #aa1925;
+}
+
+
